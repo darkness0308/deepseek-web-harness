@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeepSeek Session Connector</title>
+<style>
+  :root { color-scheme: light dark; --bg:#fff; --fg:#1b1f24; --muted:#5b6570; --line:#d5dae0; --accent:#2757d6; --ok:#12733a; --bad:#b3261e; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1b1d21; --fg:#e8eaed; --muted:#9aa3ad; --line:#3a3f46; --accent:#7ba2ff; --ok:#5fd18a; --bad:#ff8a80; } }
+  body { margin:0; padding:16px; width:300px; background:var(--bg); color:var(--fg); font:13px/1.45 system-ui, sans-serif; }
+  h1 { font-size:15px; margin:0 0 10px; }
+  #state { display:flex; align-items:center; gap:8px; margin-bottom:12px; color:var(--muted); }
+  #dot { width:9px; height:9px; border-radius:50%; background:var(--line); flex:none; }
+  #dot.on { background:var(--ok); } #dot.off { background:var(--bad); }
+  label { display:block; margin:0 0 4px; font-weight:600; }
+  input { width:100%; box-sizing:border-box; padding:7px 8px; margin-bottom:10px; border:1px solid var(--line); border-radius:6px; background:transparent; color:inherit; font:inherit; letter-spacing:.2em; }
+  #codeRow[hidden] { display:none; }
+  button#connect { width:100%; padding:10px; border:0; border-radius:6px; background:var(--accent); color:#fff; font:inherit; font-weight:700; cursor:pointer; }
+  button#connect:disabled { opacity:.55; cursor:default; }
+  #status { margin-top:12px; min-height:2.6em; white-space:pre-wrap; }
+  #status.ok { color:var(--ok); } #status.bad { color:var(--bad); }
+  a { color:var(--accent); cursor:pointer; font-size:12px; }
+  small { display:block; margin-top:10px; color:var(--muted); }
+</style>
+</head>
+<body>
+  <h1>DeepSeek Session Connector</h1>
+  <div id="state"><span id="dot"></span><span id="stateText">Checking the harness...</span></div>
+  <div id="codeRow" hidden>
+    <label for="code">Pairing code (shown in the harness)</label>
+    <input id="code" inputmode="numeric" maxlength="6" autocomplete="off" placeholder="000000">
+  </div>
+  <button id="connect">Connect</button>
+  <div id="status" role="status"></div>
+  <small>In the harness terminal type <b>/connect</b> first. Then sign in at chat.deepseek.com and press Connect.
+  <br><a id="save">No harness running? Save a file instead</a></small>
+  <script src="popup.js"></script>
+</body>
+</html>

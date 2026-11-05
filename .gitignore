@@ -1,0 +1,65 @@
+# -- Secrets and personal session data (never commit) --------------------------
+.env
+session.json
+session.json.tmp
+api_keys.json
+credentials.txt
+deepseek_cookies.json
+testing-cookies.json
+cookies/*
+!cookies/README.txt
+
+# -- Runtime state: sessions database, browser profiles, one-off recon ----------
+.harness/
+*.sqlite3
+*.sqlite3-*
+*.sqlite3.lock
+
+# -- Captured traffic (full authenticated sessions) and scratch analysis --------
+*.har
+har_analysis_*.json
+har_analysis_*.txt
+_*.py
+!__init__.py
+_har_recon.md
+
+# -- Python ---------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+
+# -- Logs and uploads (the folders stay, their contents do not) -----------------
+logs/*
+!logs/.gitkeep
+file_uploads/*
+!file_uploads/.gitkeep
+!file_uploads/Done/
+file_uploads/Done/*
+!file_uploads/Done/.gitkeep
+
+# -- Local-only developer files (kept on disk, not published) -------------------
+# Maintainer diagnostics (live proof-of-work check, export check) - not needed to run or test the project.
+/scripts/
+# The development test suite, the public-export builder and the maintainer's agent instructions: not needed to run the harness.
+/tests/
+/export.py
+/AGENTS.md
+# Screenshots the README does not use.
+docs/images/terminal-help.png
+docs/images/terminal-doctor.png
+
+# -- Tools, exports, editors, OS ------------------------------------------------
+.playwright-mcp/
+EXPORT/
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

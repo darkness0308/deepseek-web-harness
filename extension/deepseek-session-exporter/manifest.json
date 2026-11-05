@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "DeepSeek Session Connector",
+  "version": "1.0.0",
+  "description": "One click: connects your signed-in chat.deepseek.com session to your own local harness (after you type /connect in it). Nothing leaves your computer.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2Ef2PUI7RmImM4KB938Xhwpt431K0omOCBsp+EfByaRlIMwkniXZ2Wn9TLosuV5u8zrk0KDuNPET7p8Prb+q7rc2zRQsxDrFG6IvzTdKJrAzBvrt9h8tiPhz8ZXo2VlWCPyjE81GHo4WldlB2q5TOas+Gu53GY3L8dLL/2xqmFiwV59aVzCQ66suKI+/114ydh1mqHI824bVKt0a5fe1lNBtg0Tpj/Wdlv2rxjcFMW7gdXwDwiJFekxDGKguS5NthjUdlofh5FNs371mmpMa+xeFWePWvn5yzILy2s8KxZiIipYpP4xDw1u2tjCoc0CQj6WBU5i9KFEcr8Jm1r21QwIDAQAB",
+  "permissions": [
+    "cookies",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://chat.deepseek.com/*",
+    "https://*.deepseek.com/*",
+    "http://127.0.0.1:47123/*"
+  ],
+  "action": {
+    "default_title": "Connect to harness",
+    "default_popup": "popup.html"
+  }
+}

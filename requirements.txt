@@ -1,0 +1,8 @@
+flask>=2.3,<4
+flask-cors>=4,<7
+requests>=2.31,<3
+wasmtime>=14
+waitress>=3,<4
+playwright>=1.44
+jsonschema>=4.18,<5
+PyYAML>=6,<7
